@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Knowledge Explorer</title>
+	<link rel="shortcut icon" href="img/logo_icon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="how_block">
+		<div id="how_close">x</div>
+		<span>Создавайте слайды и свяжите слайды вместе.</span><br>
+		<img src="img/how1.png"><br>
+		<span>Наполняйте их контентом.</span><br>
+		<img src="img/how2.png"><br>
+		<span>Для просмотра результата вашей работы онлайн перейдите в режим просмотра.</span><br>
+		<img src="img/how3.png"><br>
+		<span>Выберите интересующую вас тему и следуйте инструкциям на интерактивной презентации.</span><br>
+		<img src="img/how4.png">
+	</div>
+	
+
+	<div id="wrapper">
+		<div id="logo">
+			<img src="img/logo.png">
+		</div>
+
+		<div id="title_block">
+			
+			<div id="title_text">
+				Вы знаете что-нибудь интересное о Нур-Султане?<br>Создайте свою интерактивную презентацию!
+			</div>
+			<div id="title_line"></div>
+		</div>
+
+		<div></div>
+
+		<div id="left_block">
+			<div>Как это работает</div>
+			<a href="Отзывы">Отзывы</a>
+		</div>
+		<a id="start_block" href="app.html">
+			<span id="start_text">Начать</span>
+		</a>
+
+		<div id="right_block">
+			<div id="social">
+				<a href="http://facebook.com"><img src="img/facebook.png" id="facebook"></a>
+				<a href="http://twitter.com"><img src="img/twitter.png" id="twitter"></a>
+				<a href="http://instagram.com"><img src="img/instagram.png" id="instagram"></a>
+			</div>
+			<div id="service">
+				<div id="service_title">О сервисе</div>
+				<div id="service_text">Knowledge Explorer - прототип веб-приложения для одной узкой области - туристической компании Нур-Султан, цель которой - познакомить гостей города с культурой и атмосферой столицы Казахстана в формате интерактивной презентации. Посетитель может выбрать маршрут знакомства и получения информации в соответствии со своим контекстным выбором на каждом слайде.</div>
+			</div>
+		</div>
+
+		<div></div>
+
+		<div id="bottom_block">
+			<a href="Обратная связь" id="feedback">Обратная связь</a>
+			<div id="osob">
+				<div id="osob_title">Особенности</div>
+				<div id="osob_text">Особенности:<br>
+					- Два режима работы: редактор маршрута и просмотр презентации;<br>
+					- 4 варианта выбора следующего слайда;<br>
+					- текстовый редактор для оформления слайдов;<br>
+					- Каждый может создать собственную интерактивную презентацию без изучения языков программирования.
+				</div>
+			</div>
+		</div>
+
+		<div></div>
+
+	</div>
+
+	<script type="text/javascript">
+		document.getElementById('start_block').addEventListener('mousedown', function() {
+			document.getElementById('start_block').style.transform = 'scale(0.95)';
+		})
+		document.getElementById('start_block').addEventListener('mouseup', function() {
+			document.getElementById('start_block').style.transform = 'scale(1.05)';
+		})
+
+
+		let kak_rabotaet = document.getElementById('left_block').childNodes[1];
+
+		kak_rabotaet.addEventListener('click', function() {
+			document.getElementById('how_block').style.display = 'block';
+		});
+
+		document.getElementById('how_close').onclick = function () {
+			document.getElementById('how_block').style.display = 'none';
+		}
+		
+
+	</script>
+</body>
+</html>
